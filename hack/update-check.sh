@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Check whether the local ai-workflows clone is behind origin/main.
+# Check whether the local ai-workflows clone is behind the configured remote
 # If so, write a marker file and send a desktop notification (Fedora/Linux).
 #
 # Intended to run from a systemd --user timer. Safe to run repeatedly:
-# notifies at most once per new origin/main SHA.
+# notifies at most once per new SHA in the configured remote.
 
 set -euo pipefail
 
@@ -92,7 +92,7 @@ COMMIT_WORD="commits"
 [[ "$BEHIND" -eq 1 ]] && COMMIT_WORD="commit"
 
 TITLE="New update for ai-workflows"
-BODY="${BEHIND} new ${COMMIT_WORD} on main
+BODY="${BEHIND} new ${COMMIT_WORD} on ${REMOTE_REF}
 
 Update with:
   ${UPDATE_CMD}"
