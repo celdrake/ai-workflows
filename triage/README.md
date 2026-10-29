@@ -110,7 +110,7 @@ the dashboard silently.
 - **Priority mismatches** — bugs where the assigned priority doesn't match the severity implied by the description
 - **Possible regressions** — table when analysis sets `regressionOf` (resolved-bug relationship)
 - **Duplicate & related clusters** — grouped bugs ranked by urgency score (computed from member-issue priorities), with suggested Jira link types and next steps
-- **All Issues table** — **Signature** (error signature / excerpt), **Duplicate of**, **Duplication %** (`duplicateConfidence` when DUPLICATE), **Regression** (`regressionOf`), plus existing columns
+- **All Issues table** — **Signature** (error signature / excerpt), **Duplicate of**, **Duplication %** (`duplicateConfidence` when DUPLICATE), **Regression** (`regressionOf`), plus existing columns; POST and ON_QA issues show an in-progress badge, and issues not updated in over 30 days show a stale badge in **Updated**
 
 ### Interactivity
 
